@@ -15,7 +15,7 @@ class Home extends StatelessWidget{
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
-              Text('Hello')
+              Text('Slio')
             ],
           ),
         )
