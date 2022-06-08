@@ -28,11 +28,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Slio'),
+        // title: const Text('Slio'),
         titleTextStyle: const TextStyle(
           fontSize: 30,
         ),
-        backgroundColor: const Color(0xFF6AD19B),
+        backgroundColor: const Color.fromARGB(0, 106, 209, 156),
       ),
       body: SafeArea(
           child: Container(
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () => {Navigator.pushNamed(context, '/recuperar-senha')},
                 child: Container(
                     margin: const EdgeInsets.only(right: 20.0),
-                    child: Text(
+                    child: const Text(
                       'Recuperar Senha',
                       textAlign: TextAlign.end,
                     ))),
@@ -104,7 +104,9 @@ class _LoginPageState extends State<LoginPage> {
                 width: 370,
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
                   child: const Text('Entrar'),
                   style: ElevatedButton.styleFrom(
                       primary: const Color(0xFF6AD19B),
