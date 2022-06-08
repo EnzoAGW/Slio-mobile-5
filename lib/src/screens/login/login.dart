@@ -41,8 +41,9 @@ class _LoginPageState extends State<LoginPage> {
         child: ListView(
           children: [
             Container(
+              margin: const EdgeInsets.only(top: 30.0),
               child: Image.asset('lib/src/assets/images/logoSlio.png',
-                  width: 100, height: 100),
+                  width: 145, height: 145),
             ),
             CampoTexto(controller: textController1, hintText: 'E-mail'),
             Padding(
@@ -91,11 +92,11 @@ class _LoginPageState extends State<LoginPage> {
             ),
             GestureDetector(
                 onTap: () => {Navigator.pushNamed(context, '/recuperar-senha')},
-                child: const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: Container(
+                    margin: const EdgeInsets.only(right: 20.0),
                     child: Text(
                       'Recuperar Senha',
-                      textAlign: TextAlign.justify,
+                      textAlign: TextAlign.end,
                     ))),
             Padding(
               padding: const EdgeInsets.all(24.0),
@@ -113,9 +114,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Image.asset('lib/src/assets/images/google_icon.png'))
           ],
         ),
       )),
