@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+
 import 'package:mobile/src/components/404/InicioVazio.dart';
 import 'package:mobile/src/components/cads/cardHome.dart';
 
@@ -13,6 +15,21 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.menu_close,
+        backgroundColor: Color(0xFF6AD19B),
+        buttonSize: const Size(65, 63),
+        children: [
+          SpeedDialChild(
+              label: 'Adicionar Produto',
+              labelBackgroundColor: Color.fromARGB(136, 0, 0, 0),
+              labelStyle: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              onTap: () => {Navigator.pushNamed(context, '/home')}),
+          SpeedDialChild(
+            label: 'Adicioar item ',
+          ),
+        ],
+      ),
       body: Container(
         margin: const EdgeInsets.only(top: 20),
         alignment: AlignmentDirectional.center,
@@ -41,28 +58,26 @@ class _HomeState extends State<Home> {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 )),
-            const InicioVazio()
-
-            // CardHome(
-            //   nomeProduto: 'Picanha',
-            //   validadeProduto: '7',
-            // ),
-            // CardHome(
-            //   nomeProduto: 'Maminha',
-            //   validadeProduto: '10',
-            // ),
-            // CardHome(
-            //   nomeProduto: 'Alcatra',
-            //   validadeProduto: '89',
-            // ),
-            // CardHome(
-            //   nomeProduto: 'Patinho',
-            //   validadeProduto: '2',
-            // ),
-            // CardHome(
-            //   nomeProduto: 'Cupim',
-            //   validadeProduto: '4',
-            // ),
+            CardHome(
+              nomeProduto: 'Picanha',
+              validadeProduto: '7',
+            ),
+            CardHome(
+              nomeProduto: 'Maminha',
+              validadeProduto: '10',
+            ),
+            CardHome(
+              nomeProduto: 'Alcatra',
+              validadeProduto: '89',
+            ),
+            CardHome(
+              nomeProduto: 'Patinho',
+              validadeProduto: '2',
+            ),
+            CardHome(
+              nomeProduto: 'Cupim',
+              validadeProduto: '4',
+            ),
           ],
         ),
       ),
