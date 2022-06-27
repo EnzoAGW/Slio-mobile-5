@@ -29,7 +29,7 @@ class _CardHomeState extends State<CardHome> {
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 widget.nomeProduto,
-                style: TextStyle(fontWeight: FontWeight.w600),
+                style: const TextStyle(fontWeight: FontWeight.w600),
               ),
               Text('Vence em ${widget.validadeProduto} dias')
             ]),

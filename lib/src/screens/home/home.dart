@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/src/components/404/InicioVazio.dart';
 import 'package:mobile/src/components/cads/cardHome.dart';
 
 class Home extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.only(top: 20),
-        alignment: AlignmentDirectional.topCenter,
+        alignment: AlignmentDirectional.center,
         child: ListView(
           children: [
             const Padding(
@@ -40,26 +41,28 @@ class _HomeState extends State<Home> {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 )),
-            CardHome(
-              nomeProduto: 'Picanha',
-              validadeProduto: '7',
-            ),
-            CardHome(
-              nomeProduto: 'Maminha',
-              validadeProduto: '10',
-            ),
-            CardHome(
-              nomeProduto: 'Alcatra',
-              validadeProduto: '89',
-            ),
-            CardHome(
-              nomeProduto: 'Patinho',
-              validadeProduto: '2',
-            ),
-            CardHome(
-              nomeProduto: 'Cupim',
-              validadeProduto: '4',
-            ),
+            const InicioVazio()
+
+            // CardHome(
+            //   nomeProduto: 'Picanha',
+            //   validadeProduto: '7',
+            // ),
+            // CardHome(
+            //   nomeProduto: 'Maminha',
+            //   validadeProduto: '10',
+            // ),
+            // CardHome(
+            //   nomeProduto: 'Alcatra',
+            //   validadeProduto: '89',
+            // ),
+            // CardHome(
+            //   nomeProduto: 'Patinho',
+            //   validadeProduto: '2',
+            // ),
+            // CardHome(
+            //   nomeProduto: 'Cupim',
+            //   validadeProduto: '4',
+            // ),
           ],
         ),
       ),
